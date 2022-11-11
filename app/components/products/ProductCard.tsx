@@ -13,7 +13,7 @@ export function ProductCard({
   return (
     <Link className="flex flex-col" prefetch='intent' to={`/products/${slug}`}>
       <img
-        className="rounded-xl flex-grow object-cover aspect-[7/8]"
+        className="flex-grow object-cover aspect-[7/8]"
         alt=""
         src={productAsset?.preview + '?w=300&h=400'}
       />
@@ -22,7 +22,7 @@ export function ProductCard({
         {productName}
       </div>
       <div className="text-sm font-medium text-gray-900">
-        <Price priceWithTax={priceWithTax} currencyCode={currencyCode} />
+        {/* <Price priceWithTax={priceWithTax} currencyCode={currencyCode} /> */}
       </div>
     </Link>
   );

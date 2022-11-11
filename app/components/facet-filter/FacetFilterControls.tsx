@@ -56,7 +56,7 @@ export default function FacetFilterControls({
                             <Dialog.Panel className="ml-auto relative max-w-xs w-full h-full bg-white shadow-xl py-4 pb-12 flex flex-col overflow-y-auto">
                                 <div className="px-4 flex items-center justify-between">
                                     <h2 className="text-lg font-medium text-gray-900">
-                                        Filters
+                                        Filtres
                                     </h2>
                                     <button
                                         type="button"
@@ -66,7 +66,7 @@ export default function FacetFilterControls({
                                         }
                                     >
                                         <span className="sr-only">
-                                            Close menu
+                                            Fermer menu
                                         </span>
                                         <XIcon
                                             className="h-6 w-6"

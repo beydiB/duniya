@@ -20,7 +20,7 @@ export function FiltersButton({
             ) : (
                 ''
             )}
-            <span>Filters</span>
+            <span>Filtrer par catégorie</span>
             <FilterIcon className="w-5 h-5" aria-hidden="true" />
         </button>
     );

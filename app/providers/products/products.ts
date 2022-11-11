@@ -14,6 +14,24 @@ export function getProductBySlug(slug: string, options: QueryOptions) {
   return sdk.product({ slug }, options);
 }
 
+//
+
+export const getAllProducts = gql`
+    query products {
+        products {
+            items {
+                id
+                name
+                slug
+                featuredAsset {
+                    id
+                    preview
+                }
+            }
+        }
+    }
+`;
+
 export const detailedProductFragment = gql`
   fragment DetailedProduct on Product {
     id

@@ -98,7 +98,7 @@ export default function ProductSlug() {
 
     return (
         <div>
-            <div className="max-w-6xl mx-auto px-4">
+            <div className="max-w-7xl mx-auto px-4">
                 <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-gray-900 my-8">
                     {product.name}
                 </h2>
@@ -110,7 +110,7 @@ export default function ProductSlug() {
                 ></Breadcrumbs>
                 <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start mt-4 md:mt-12">
                     {/* Image gallery */}
-                    <div className="w-full max-w-2xl mx-auto sm:block lg:max-w-none">
+                    <div className="w-2/4 max-w-2xl mx-auto sm:block lg:max-w-none">
                         <span className="rounded-md overflow-hidden">
                             <div className="w-full h-full object-center object-cover rounded-lg">
                                 <img
@@ -220,7 +220,7 @@ export default function ProductSlug() {
                             )}
 
                             <div className="mt-10 flex flex-col sm:flex-row sm:items-center">
-                                <p className="text-3xl text-gray-900 mr-4">
+                                {/* <p className="text-3xl text-gray-900 mr-4">
                                     <Price
                                         priceWithTax={
                                             selectedVariant?.priceWithTax
@@ -229,9 +229,9 @@ export default function ProductSlug() {
                                             selectedVariant?.currencyCode
                                         }
                                     ></Price>
-                                </p>
+                                </p> */}
                                 <div className="flex sm:flex-col1 align-baseline">
-                                    <button
+                                    {/* <button
                                         type="submit"
                                         className={`max-w-xs flex-1 ${
                                             transition.state !== 'idle'
@@ -253,23 +253,36 @@ export default function ProductSlug() {
                                         ) : (
                                             `Add to cart`
                                         )}
-                                    </button>
+                                    </button> */}
 
-                                    <button
-                                        type="button"
-                                        className="ml-4 py-3 px-3 rounded-md flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500"
+                                    {/* <button
+                                        type="submit"
+                                        className={`max-w-xs flex-1 ${
+                                            transition.state !== 'idle'
+                                                ? 'bg-gray-400'
+                                                : qtyInCart === 0
+                                                ? 'bg-primary-600 hover:bg-primary-700'
+                                                : 'bg-green-600 active:bg-green-700 hover:bg-green-700'
+                                        }
+                                     transition-colors border border-transparent rounded-md py-3 px-8 flex items-center
+                                      justify-center text-base font-medium text-white focus:outline-none
+                                      focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-primary-500 sm:w-full`}
+                                        disabled={transition.state !== 'idle'}
                                     >
-                                        <HeartIcon
-                                            className="h-6 w-6 flex-shrink-0"
-                                            aria-hidden="true"
-                                        />
-                                        <span className="sr-only">
-                                            Add to favorites
-                                        </span>
-                                    </button>
+                                        {qtyInCart ? (
+                                            <span className="flex items-center">
+                                                <CheckIcon className="w-5 h-5 mr-1" />{' '}
+                                                {qtyInCart} in cart
+                                            </span>
+                                        ) : (
+                                            `Contactez nous sur Whatsapp`
+                                        )}
+                                    </button> */}
+
+                                    <div><a className="bg-green-600 px-4 py-4 mb-2 text-white rounded-md" href="https://api.whatsapp.com/send?phone=3197010240285text="><span>Contactez nous sur Whatsapp</span></a></div>
                                 </div>
                             </div>
-                            <div className="mt-2 flex items-center space-x-2">
+                            <div className="mt-6 flex items-center space-x-2">
                                 <span className="text-gray-500">
                                     {selectedVariant?.sku}
                                 </span>
@@ -282,17 +295,15 @@ export default function ProductSlug() {
                                     <Alert message={addItemToOrderError} />
                                 </div>
                             )}
-
                             <section className="mt-12 pt-12 border-t text-xs">
                                 <h3 className="text-gray-600 font-bold mb-2">
-                                    Shipping & Returns
+                                    Infos
                                 </h3>
                                 <div className="text-gray-500 space-y-1">
                                     <p>
-                                        Standard shipping: 3 - 5 working days.
-                                        Express shipping: 1 - 3 working days.
+                                        Pour toutes informations supplémentaires veuillez nous contacter directement par téléphone au 99 99 99 99 ou sur whatsapp
                                     </p>
-                                    <p>
+                                    {/* <p>
                                         Shipping costs depend on delivery
                                         address and will be calculated during
                                         checkout.
@@ -304,7 +315,7 @@ export default function ProductSlug() {
                                             returns page
                                         </span>{' '}
                                         for further information.
-                                    </p>
+                                    </p> */}
                                 </div>
                             </section>
                         </activeOrderFetcher.Form>
@@ -312,7 +323,7 @@ export default function ProductSlug() {
                 </div>
             </div>
             <div className="mt-24">
-                <TopReviews></TopReviews>
+                {/* <TopReviews></TopReviews> */}
             </div>
         </div>
     );
