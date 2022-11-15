@@ -2,8 +2,8 @@ import { DocumentNode, print } from 'graphql';
 import { getSdk } from './generated/graphql';
 import { sessionStorage } from './sessions';
 
-const DEMO_API_URL = 'https://readonlydemo.vendure.io/shop-api';
-const API_URL =
+const DEMO_API_URL = 'http://localhost:3001/shop-api';
+const API_URL = 
     typeof process !== 'undefined'
         ? process.env.VENDURE_API_URL ?? DEMO_API_URL
         : DEMO_API_URL;
