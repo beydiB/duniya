@@ -72,6 +72,10 @@ export default function Index() {
                     <img src="mobilier.jpg" alt="" />
                     <img src="phone.jpg" alt="" />
                 </div>
+                <div className='grid gap-2 xl:grid-cols-2 xl:gap-x-8 py-4'>
+                    <Link to={"/collections/imprimante-photocopieuse"}><img src="solaire.jpg" alt="" /></Link>
+                    <Link to={"/collections/imprimante-photocopieuse"}><img src="papeterie.jpg" alt="" /></Link>
+                </div>
             </section>
         </>
     );

@@ -25,11 +25,11 @@ export function Header({
     const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
     const isScrollingUp = useScrollingUp();
     return (
-        <header className = 'xl:container xl:mx-auto'
-            // className={classNames(
-            //     isScrollingUp ? 'sticky top-0 z-10 animate-dropIn' : '',
-            //     'bg-white from-zinc-700 to-gray-900 shadow-lg transform shadow-xl',
-            // )}
+        <header className='xl:container xl:mx-auto'
+        // className={classNames(
+        //     isScrollingUp ? 'sticky top-0 z-10 animate-dropIn' : '',
+        //     'bg-white from-zinc-700 to-gray-900 shadow-lg transform shadow-xl',
+        // )}
         >
             {/* <div className="bg-zinc-100 text-gray-600 shadow-inner text-center text-sm py-2 px-2 xl:px-0">
                 <div className="max-w-6xl mx-2 md:mx-auto flex items-center justify-between">
@@ -50,17 +50,17 @@ export function Header({
                 </div>
             </div> */}
             <div className="max-w-7xl mx-auto p-4 flex items-center space-x-4 shadow-sm justify-between">
-                
-                    <Link to="/">
-                        <img
-                            src="/logo.png"
-                            width={200}
-                            // height={31}
-                            alt="Duniya logo"
-                        />
-                    </Link>
 
-                
+                <Link to="/">
+                    <img
+                        src="/logo.png"
+                        width={200}
+                        // height={31}
+                        alt="Duniya logo"
+                    />
+                </Link>
+
+
                 <div className="hidden w-1/2 md:pr-4 lg:block">
                     <SearchBar></SearchBar>
                 </div>
@@ -68,7 +68,7 @@ export function Header({
                     <PhoneIcon className="w-4 h-4 mr-2"></PhoneIcon>
                     <p className='text-black'>71 56 65 50</p>
                 </div>
-                
+
                 {/*<div className="">
                      <button
                         className="relative w-9 h-9 bg-white bg-opacity-20 rounded p-1"
@@ -84,7 +84,7 @@ export function Header({
                             ''
                         )}
                     </button> */}
-                    {/* <button
+                {/* <button
                         className="relative w-9 h-9 bg-white bg-opacity-20 rounded p-1"
                         onClick={onCartIconClick}
                         aria-label="Open cart tray"
@@ -107,20 +107,20 @@ export function Header({
                 <nav className="hidden lg:block px-2 w-44 rounded-sm bg-white">
                     <ul>
                         {data.collections.map((collection) => (
-                        <li><Link
-                            className="text-sm md:text-base text-black-200 hover:text-grey"
-                            to={'/collections/' + collection.slug}
-                            prefetch="intent"
-                            key={collection.id}
-                        >
-                            {collection.name}
-                        </Link>
-                        </li>
-                    ))}
+                            <li><Link
+                                className="text-sm md:text-base text-black-200 hover:text-grey"
+                                to={'/collections/' + collection.slug}
+                                prefetch="intent"
+                                key={collection.id}
+                            >
+                                {collection.name}
+                            </Link>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
-                <section className =" w-10  bg-sky-500 flex-auto rounded-sm">
-                    <img src='/build/assets/hero.jpg' alt="" />
+                <section className=" w-10  bg-sky-500 flex-auto rounded-sm">
+                    <img src='/hero.jpg' alt="" />
                 </section>
             </section>
         </header>
